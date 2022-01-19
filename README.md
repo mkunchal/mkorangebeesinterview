@@ -1,5 +1,6 @@
-# OrangeBeesInterview-MichaelKunchal
-Angular Coding Test for Orange Bees Front End Angular Developer Position
+# mkorangebeesinterview
+
+Angular Coding Test by Michael Kunchal for Orange Bees - Front End Angular Developer Position
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
