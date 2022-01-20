@@ -1,0 +1,33 @@
+@import '@angular/material/prebuilt-themes/indigo-pink';
+
+.input-column {
+    min-height: 400px;
+    display: grid;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.form-row {
+    margin-top: 15%;
+}
+mat-card-content {
+    margin: 8px;
+}
+.description-field {
+    min-height: 100px;
+}
+.full-width {
+    width: 100%;
+}
+mat-card-actions {
+    text-align: center;
+}
+.submit-button {
+    width: 100%;
+}

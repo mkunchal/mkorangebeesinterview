@@ -2,3 +2,12 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import '@angular/material/prebuilt-themes/indigo-pink';
+
+/* - MARK - NAVBAR styles */
+.navbar {
+    padding: 0 !important;
+}
+.toolbar-space {
+    flex: 1 1 auto;
+}

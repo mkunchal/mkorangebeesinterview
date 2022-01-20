@@ -1,1 +1,12 @@
-
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <mat-toolbar color="primary">
+        <button mat-icon-button class="nav-icon" aria-label="Home Button and Icon" [routerLink]="routeNames.home">
+            <mat-icon>home</mat-icon>
+            <!--<span>Orange Bees Programming Challenge</span>-->
+        </button>
+        <span class="toolbar-space"></span>
+        <button mat-icon-button class="nav-icon" aria-label="Input Button and Add Note Icon" [routerLink]="routeNames.input">
+          <mat-icon>note_add</mat-icon>
+        </button>
+    </mat-toolbar>
+</nav>
