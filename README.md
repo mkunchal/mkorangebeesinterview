@@ -27,4 +27,13 @@ Displayed the list of elements that is retrieved from the GET Api call in a Mate
 ### Api Request
 
 The API requests were written with HttpClient, are handled with Observable Error Handling and return Observables.
-The Global Service to call the API is the ApiService in framework/services/api 
+The Global Service to call the API is the ApiService in framework/services/api
+
+### Edits
+
+Adding Mobile Responsive Support for the Material Table and some better styling (It is supported for the Form on the InputComponent)
+
+
+### End Note
+
+I hope this suffices as I think it is a good guage of the tip of what I am able to do. With more time and planning I can create some great Angular Applications. I hope you enjoy this and please let me know if there is anything you would like me to add and I would be happy to! Thanks!
