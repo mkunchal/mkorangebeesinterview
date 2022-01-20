@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import {merge, Observable, of as observableOf} from 'rxjs';
 import {catchError, map, startWith, switchMap} from 'rxjs/operators';
 import { IMember } from '../framework/models/iMember';
+import { AlertsService } from '../framework/services/alerts/alerts.service';
 import { ApiService } from '../framework/services/api/api.service';
 
 @Component({
@@ -26,13 +27,17 @@ export class DisplayComponent implements AfterViewInit {
   paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private alerts: AlertsService) { }
 
+  // - MARK - Table contains SORT for ASC and DESC of Created, Email Address, and Type ID
   ngAfterViewInit() {
     this.memberData.paginator = this.paginator;
     this.memberData.sort = this.sort;
     this.loadTable();
   }
+
+  // - MARK - Load Table set up to take in an API from HTTPClient. Err on subscribe gets called after timeout which displays alert and the dummy data.
+
   loadTable() {
     // Default to just one page number
 
@@ -55,7 +60,9 @@ export class DisplayComponent implements AfterViewInit {
       .subscribe(
         data => this.memberData.data = data,
         err => {
+          this.memberLength = 7; // Default value from dummy data
           this.memberData.data = this.apiService.readJson();
+          this.alerts.displayAlert('Invalid API, here is Dummy Member Data')
           this.isLoading = false;
         },
         () => {

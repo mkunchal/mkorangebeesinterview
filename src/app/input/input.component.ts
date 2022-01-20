@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { IMember } from '../framework/models/iMember';
 import { ApiService } from '../framework/services/api/api.service';
 import { Router } from '@angular/router';
+import { AlertsService } from '../framework/services/alerts/alerts.service';
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
@@ -19,14 +20,14 @@ export class InputComponent implements AfterViewInit {
   ];
 
   inputGroup: FormGroup;
-  emailIdControl = new FormControl(5, Validators.required);
+  emailIdControl = new FormControl('', Validators.required);
   descriptionAlertValidate = false;
 
   emailAlertValidate = false;
   invalidEmailValidate = false;
 
   isLoading = false;
-  constructor(public formBuilder: FormBuilder, private apiService: ApiService, private router: Router) { 
+  constructor(public formBuilder: FormBuilder, private apiService: ApiService, private router: Router, private alerts: AlertsService) { 
     this.inputGroup = this.formBuilder.group({
       emailAddress: ['', Validators.email],
       isPrimary: [false],
@@ -76,9 +77,9 @@ export class InputComponent implements AfterViewInit {
 
     }
   }
+  // - MARK - Form Action checking for valid form input first, then saves the form data as an Interface with the timeCreated variable. Then saved through the Global API service. The error will get called which displays alert and redirects back to the display component.
   inputData() {
-    if (this.isInputValid()) {
-      console.log('Put in API here');
+    if (this.inputGroup.valid) {
       const inputValue: IMember = this.inputGroup.value;
       inputValue.timeCreated = Date.now();
       this.isLoading = true;
@@ -90,8 +91,7 @@ export class InputComponent implements AfterViewInit {
           this.isLoading = false;
           },
           error => {
-            // Save IMember to Cache to be able to get on DisplayComponent
-            console.log('Store in Local Storage Here for Aesthetic Purposes');
+            this.alerts.displayAlert('Invalid API, here is Dummy Member Data');
             this.isLoading = false;
             this.router.navigate(['']);
           },
@@ -100,15 +100,8 @@ export class InputComponent implements AfterViewInit {
           }
         )
     } else {
-      console.log('Put in alert here if you have time');
-    }
-  }
-
-  isInputValid(): boolean {
-    if (this.inputGroup.valid) {
-      return true;
-    } else {
-      return false;
+      // This is to display validators just in case.
+      this.inputGroup.markAsTouched();
     }
   }
 

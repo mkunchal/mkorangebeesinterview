@@ -8,22 +8,23 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Code Commenting using - MARK -
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The most important comments throughout the project are denoted with the - MARK - phrase.
 
-## Build
+### Module and Route 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The InputModule which has the form for the project is the Lazy Loaded Component which contains its own routing file that routes back to the DisplayComponent . The unmatched routes default to the 'input' route.
 
-## Running unit tests
+### Form
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The Reactive Form is in the InputModule, the form doesn't submit and the proper validation is in place. Submitting executes a POST request that has a 1000 timeout. Since the API is invalid this was done so it wouldn't have to wait for an automatic timeout which could take a few minutes. All form components are using Angular Material.
 
-## Running end-to-end tests
+### List
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Displayed the list of elements that is retrieved from the GET Api call in a Material Table. There is a timeout and this defaults to using a fakeData list of IMember. IMember is an Interface to define the data model talked about in the Form section. Went a little above and you can sort the list BY ASC/DESC Email Address, Created and Email Type ID.
 
-## Further help
+### Api Request
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The API requests were written with HttpClient, are handled with Observable Error Handling and return Observables.
+The Global Service to call the API is the ApiService in framework/services/api 

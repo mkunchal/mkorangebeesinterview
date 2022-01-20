@@ -1,4 +1,4 @@
-
+// - MARK - Global Variables file for the URL Routes and the Fake Member Data.
 export class Globals {
     public static routeNames = {
         home: '',

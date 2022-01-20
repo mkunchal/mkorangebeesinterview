@@ -1,3 +1,5 @@
+
+// - MARK - Data Models for a typical API response MemberApi and for the POST & Table model with IMember
 export interface MemberApi {
     members: IMember[];
     count: number;

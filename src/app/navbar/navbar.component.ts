@@ -7,9 +7,7 @@ import { Globals } from '../globals';
 })
 export class NavbarComponent implements OnInit {
   routeNames = Globals.routeNames;
-  constructor() { 
-    
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
