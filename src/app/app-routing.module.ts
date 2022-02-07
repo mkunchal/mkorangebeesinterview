@@ -8,15 +8,17 @@ import { DisplayComponent } from './display/display.component';
 
 // - MARK - '**' route handles any unmatched route and just redirects to the input route.
 
+/* - MARK - 'v2' {
+    path: 'v2', loadChildren: () => import('./v2/v2-app.module').then(m => m.V2AppModule)
+  },
+*/
+
 const routes: Routes = [
   {
     path: '', component: DisplayComponent
   },
   {
-    path: 'input', loadChildren: () => import('./input/input.module').then(m => m.InputModule) 
-  },
-  {
-    path: 'v2', loadChildren: () => import('./v2/v2.module').then(m => m.V2Module)
+    path: 'input', loadChildren: () => import('./input/input.module').then(m => m.InputModule)
   },
   {
     path: '**',

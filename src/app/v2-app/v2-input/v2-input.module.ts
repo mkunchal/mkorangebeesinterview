@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { V2RoutingModule } from './v2-routing.module';
+import { V2InputRoutingModule } from './v2-input-routing.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    V2RoutingModule
+    V2InputRoutingModule
   ]
 })
-export class V2Module { }
+export class V2InputModule { }
