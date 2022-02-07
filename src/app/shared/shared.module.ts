@@ -18,10 +18,16 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { ApiService } from '../framework/services/api/api.service';
 import { AlertsService } from '../framework/services/alerts/alerts.service';
+import { SharedComponent } from './shared.component';
 
 // - MARK - Any Modules or Services used on the Lazy-Loaded and AppModule. Went ahead and added all the material modules here for a best practice. 
 
 @NgModule({
+  declarations: [ SharedComponent ],
+  providers: [
+    ApiService,
+    AlertsService,
+  ],
   exports: [
     MatButtonModule,
     MatCardModule,
@@ -39,10 +45,6 @@ import { AlertsService } from '../framework/services/alerts/alerts.service';
     MatTableModule,
     MatToolbarModule,
     MatSnackBarModule
-  ],
-  providers: [
-      ApiService,
-      AlertsService
   ]
 })
 export class SharedModule {}

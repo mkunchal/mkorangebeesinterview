@@ -6,7 +6,7 @@ import { MemberApi, IMember } from '../../models/iMember';
 import { Globals } from '../../../globals';
 import { SharedModule } from 'src/app/shared/shared.module';
 
-@Injectable({ providedIn: SharedModule })
+@Injectable({ providedIn: 'root' })
 export class ApiService {
   // - MARK - Fake API Url Here
   apiMain = 'https://fakeApi.com';

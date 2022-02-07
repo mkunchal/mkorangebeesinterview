@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputRoutingModule } from './input-routing.module';
 import { InputComponent } from './input.component';
 
@@ -19,6 +19,9 @@ import { AlertsService } from '../framework/services/alerts/alerts.service';
     FormsModule,
     ReactiveFormsModule,
     SharedModule
+  ],
+  providers: [
+    FormBuilder
   ]
 })
 export class InputModule { }

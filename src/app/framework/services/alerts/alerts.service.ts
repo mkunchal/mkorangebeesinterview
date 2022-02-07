@@ -6,7 +6,7 @@ import {
 } from '@angular/material/snack-bar';
 import { SharedModule } from 'src/app/shared/shared.module';
 
-@Injectable({ providedIn: SharedModule })
+@Injectable({ providedIn: 'root' })
 export class AlertsService {
   defaultHorizontalPosition: MatSnackBarHorizontalPosition = 'end';
   defaultVerticalPosition: MatSnackBarVerticalPosition = 'bottom';
