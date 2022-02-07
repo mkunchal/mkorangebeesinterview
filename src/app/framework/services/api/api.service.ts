@@ -4,8 +4,9 @@ import { Observable, throwError, timer } from 'rxjs';
 import { catchError, retry, timeout } from 'rxjs/operators';
 import { MemberApi, IMember } from '../../models/iMember';
 import { Globals } from '../../../globals';
+import { SharedModule } from 'src/app/shared/shared.module';
 
-@Injectable()
+@Injectable({ providedIn: SharedModule })
 export class ApiService {
   // - MARK - Fake API Url Here
   apiMain = 'https://fakeApi.com';

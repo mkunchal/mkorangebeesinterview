@@ -9,6 +9,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DisplayComponent } from './display/display.component';
 
 import { SharedModule } from './shared/shared.module';
+import { ApiService } from './framework/services/api/api.service';
+import { AlertsService } from './framework/services/alerts/alerts.service';
 
 @NgModule({
   declarations: [
