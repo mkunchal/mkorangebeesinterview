@@ -16,8 +16,11 @@ const routes: Routes = [
     path: 'input', loadChildren: () => import('./input/input.module').then(m => m.InputModule) 
   },
   {
+    path: 'v2', loadChildren: () => import('./v2/v2.module').then(m => m.V2Module)
+  },
+  {
     path: '**',
-    redirectTo: 'input'
+    redirectTo: ''
   }
 ];
 

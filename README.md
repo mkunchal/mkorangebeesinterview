@@ -2,7 +2,7 @@
 
 Angular Coding Test by Michael Kunchal for Orange Bees - Front End Angular Developer Position
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+Updated to Angular 13 
 
 ## Development server
 
@@ -32,6 +32,10 @@ The Global Service to call the API is the ApiService in framework/services/api
 ### Edits
 
 Adding Mobile Responsive Support for the Material Table and some better styling (It is supported for the Form on the InputComponent)
+
+### Tests
+
+Implemented Github Actions in the .github/workflows directory to specify the Node version of '14.x' and run ng test using ChromeHeadlessCI
 
 
 ### End Note
