@@ -4,6 +4,12 @@ Angular Coding Test by Michael Kunchal for Orange Bees - Front End Angular Devel
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
+## UPDATES
+* The Angular Version from 11 to 13.
+* Built in support for Github Actions testing to run on each deploy
+* Customized further testing with the .spec component files
+* Branched to ’tests' for the remainder of updates.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
