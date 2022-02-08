@@ -1,1 +1,14 @@
-<p>v2-navbar works!</p>
+<mat-toolbar color="primary" class="v2-navbar">
+    <button mat-icon-button id="v2-home-navbar-button" class="nav-icon" aria-label="Home Button and Icon" [routerLink]="['/v2/display']">
+        <mat-icon id="v2-home-navbar-icon">new_releases</mat-icon>
+        Orange Bees Programming Challenge V2
+        <!--<span>Orange Bees Programming Challenge</span>-->
+    </button>
+    <span class="toolbar-space"></span>
+    <button mat-icon-button id="v2-create-navbar-button" class="nav-icon" aria-label="Input Button and Add Note Icon" [routerLink]="['/v2/input/create']">
+      <mat-icon id="v2-create-navbar-icon">create</mat-icon>
+    </button>
+    <button mat-icon-button id="v1-navbar-navbar-button" class="nav-icon" aria-label="Input Button and Add Note Icon" [routerLink]="['/']">
+      <mat-icon id="v1-navbar-icon">screen_share</mat-icon>
+    </button>
+</mat-toolbar>

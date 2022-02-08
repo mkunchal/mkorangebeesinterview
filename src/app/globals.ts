@@ -1,8 +1,9 @@
 // - MARK - Global Variables file for the URL Routes and the Fake Member Data.
 export class Globals {
     public static routeNames = {
-        home: '',
-        input: 'input'
+        home: '/',
+        input: '/input',
+        v2: '/v2/display',
     }
 
     public static fakeData = {

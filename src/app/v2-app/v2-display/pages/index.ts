@@ -1,0 +1,1 @@
+export * from './v2-detail/v2-detail.component';

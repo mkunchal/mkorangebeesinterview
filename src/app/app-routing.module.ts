@@ -15,14 +15,19 @@ import { DisplayComponent } from './display/display.component';
 
 const routes: Routes = [
   {
-    path: '', component: DisplayComponent
+    path: 'home',
+    component: DisplayComponent
+  },
+  {
+    path: 'v2',
+    loadChildren: () => import('./v2-app/v2-app.module').then(m => m.V2AppModule)
   },
   {
     path: 'input', loadChildren: () => import('./input/input.module').then(m => m.InputModule)
   },
   {
     path: '**',
-    redirectTo: ''
+    redirectTo: '/v2'
   }
 ];
 

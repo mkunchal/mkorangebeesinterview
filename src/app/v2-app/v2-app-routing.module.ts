@@ -1,7 +1,27 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, ActivatedRoute } from '@angular/router';
+import { V2AppComponent } from './v2-app.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'display',
+    loadChildren: () => import('./v2-display/v2-display.module').then(m => m.V2DisplayModule),
+    data: {
+      preload: true, delay:1000
+    }
+  },
+  {
+    path: 'input',
+    loadChildren: () => import('./v2-input/v2-input.module').then(m => m.V2InputModule),
+    data: {
+      preload: true, delay:8000
+    }
+  },
+  {
+    path: '**',
+    redirectTo: '/v2/display'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

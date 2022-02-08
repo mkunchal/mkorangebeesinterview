@@ -1,7 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { V2CreateComponent } from './pages';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'create',
+    component: V2CreateComponent
+  },
+  {
+    path: '',
+    redirectTo: '/v2/input/create'
+  },
+  {
+    path: '**',
+    redirectTo: '/v2/display'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

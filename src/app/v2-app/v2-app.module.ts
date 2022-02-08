@@ -1,22 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { V2AppRoutingModule } from './v2-app-routing.module';
 import { V2AppComponent } from './v2-app.component';
-import { V2SharedModule } from './v2-shared/v2-shared.module';
+import { V2SharedModule } from './v2-shared';
+import { V2CoreModule } from './v2-core';
+import { V2PreloaderService } from './v2-preloader.service';
 
 
 
 @NgModule({
   declarations: [
-    V2AppComponent,
-
+    V2AppComponent
   ],
   imports: [
     CommonModule,
-    FlexLayoutModule,
     V2AppRoutingModule,
-    V2SharedModule
+    V2SharedModule,
+    V2CoreModule,
+  ],
+  providers: [
+    V2PreloaderService
+  ],
+  exports: [
+    V2CoreModule,
+    V2AppComponent,
+    FlexLayoutModule
   ]
 })
 export class V2AppModule { }

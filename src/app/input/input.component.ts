@@ -93,7 +93,7 @@ export class InputComponent implements AfterViewInit {
           error => {
             this.alerts.displayAlert('Invalid API, here is Dummy Member Data');
             this.isLoading = false;
-            this.router.navigate(['']);
+            this.router.navigate(['/']);
           },
           () => {
             // Will Not get called since this is when a request is complete.
