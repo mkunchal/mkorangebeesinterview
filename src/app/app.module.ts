@@ -11,7 +11,7 @@ import { DisplayComponent } from './display/display.component';
 import { SharedModule } from './shared/shared.module';
 import { ApiService } from './framework/services/api/api.service';
 import { AlertsService } from './framework/services/alerts/alerts.service';
-import { V2AppModule } from './v2-app/v2-app.module';
+import { V2CoreModule } from './v2-app/v2-core';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { V2AppModule } from './v2-app/v2-app.module';
     BrowserAnimationsModule,
     HttpClientModule,
     SharedModule,
-    V2AppModule
+    V2CoreModule
   ],
   bootstrap: [AppComponent]
 })

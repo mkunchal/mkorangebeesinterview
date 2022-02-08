@@ -18,15 +18,9 @@ import { V2PreloaderService } from './v2-preloader.service';
     CommonModule,
     V2AppRoutingModule,
     V2SharedModule,
-    V2CoreModule,
   ],
   providers: [
     V2PreloaderService
-  ],
-  exports: [
-    V2CoreModule,
-    V2AppComponent,
-    FlexLayoutModule
   ]
 })
 export class V2AppModule { }
