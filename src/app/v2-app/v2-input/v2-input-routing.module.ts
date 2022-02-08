@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/v2/display'
+    redirectTo: '/v2/home/display'
   }
 ];
 

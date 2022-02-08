@@ -5,7 +5,7 @@ import { V2DisplayComponent } from './v2-display.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'display',
     component: V2DisplayComponent
   },
   {
@@ -14,11 +14,11 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '',
+    redirectTo: '/v2/home/display',
   },
   {
     path: '**',
-    redirectTo: ''
+    redirectTo: '/v2/home/display'
   }
 ];
 

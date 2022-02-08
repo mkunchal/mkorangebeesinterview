@@ -14,12 +14,10 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    V2NavbarComponent
   ],
   imports: [
     HttpClientModule,
     CommonModule,
-    RouterModule,
     FlexLayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -28,13 +26,12 @@ import { RouterModule } from '@angular/router';
     MatSnackBarModule
   ],
   exports: [
-    V2NavbarComponent,
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
     MatSnackBarModule,
     FlexLayoutModule,
-    RouterModule
+    MatToolbarModule
   ]
 })
 export class V2SharedModule { }

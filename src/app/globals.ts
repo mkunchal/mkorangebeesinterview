@@ -3,7 +3,7 @@ export class Globals {
     public static routeNames = {
         home: '/',
         input: '/input',
-        v2: '/v2/display',
+        v2: '/v2/home/display',
     }
 
     public static fakeData = {

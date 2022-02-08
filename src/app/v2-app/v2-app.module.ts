@@ -4,7 +4,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { V2AppRoutingModule } from './v2-app-routing.module';
 import { V2AppComponent } from './v2-app.component';
-import { V2SharedModule } from './v2-shared';
+import { V2NavbarComponent, V2SharedModule } from './v2-shared';
 import { V2CoreModule } from './v2-core';
 import { V2PreloaderService } from './v2-preloader.service';
 
@@ -12,7 +12,8 @@ import { V2PreloaderService } from './v2-preloader.service';
 
 @NgModule({
   declarations: [
-    V2AppComponent
+    V2AppComponent,
+    V2NavbarComponent
   ],
   imports: [
     CommonModule,

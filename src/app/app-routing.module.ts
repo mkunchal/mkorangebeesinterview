@@ -26,8 +26,8 @@ const routes: Routes = [
     path: 'input', loadChildren: () => import('./input/input.module').then(m => m.InputModule)
   },
   {
-    path: '**',
-    redirectTo: '/v2'
+    path: '',
+    redirectTo: '/v2/home/display',
   }
 ];
 
