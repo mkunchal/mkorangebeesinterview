@@ -1,1 +1,35 @@
-<p>v2-display works!</p>
+<div fxLayout="column" class="v2-home-display-wrapper" fxFlexFill>
+    <div fxFlex="25" class="v2-home-display-top-spacer" fxFlexFill></div>
+    <div fxFlex="50" class="v2-home-display-table-wrapper" fxFlexFill>
+        <table mat-table [dataSource]="v2MemberDataSource" class="display-table" matSort>
+            <ng-container matColumnDef="member">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let row">{{row.member}}</td>
+            </ng-container>
+            <ng-container matColumnDef="isPrimary">
+                <th mat-header-cell *matHeaderCellDef>Primary</th>
+                <td mat-cell *matCellDef="let row">{{row.isPrimary}}</td>
+            </ng-container>
+            <ng-container matColumnDef="emailAddress">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+                <td mat-cell *matCellDef="let row">{{row.emailAddress}}</td>
+            </ng-container>
+            <ng-container matColumnDef="emailTypeId">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Type ID</th>
+                <td mat-cell *matCellDef="let row">{{row.emailTypeId}}</td>
+            </ng-container>
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef>Description</th>
+                <td mat-cell *matCellDef="let row">{{row.description}}</td>
+            </ng-container>
+            <ng-container matColumnDef="timeCreated">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>Created</th>
+                <td mat-cell *matCellDef="let row">{{row.timeCreated | date}}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="colNames"></tr>
+            <tr mat-row *matRowDef="let row; columns: colNames;"></tr>
+        </table>
+    </div>
+    <div fxFlex="25" class="v2-home-display-bottom-spacer" fxFlexFill></div>
+</div>

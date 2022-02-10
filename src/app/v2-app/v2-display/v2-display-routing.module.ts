@@ -9,10 +9,6 @@ const routes: Routes = [
     component: V2DisplayComponent
   },
   {
-    path: 'details',
-    component: V2DetailComponent
-  },
-  {
     path: '',
     redirectTo: '/v2/home/display',
   },
